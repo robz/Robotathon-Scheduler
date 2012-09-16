@@ -10,14 +10,18 @@ public class Scheduler
 	};
 
 	public static void main(String[] args) {
-		if (args.length != 1) {
-			System.out.println("ERROR: bad args. usage: \njava Scheduler <filename>");
+		String filename = "example_times.txt";
+		
+		if (args.length == 1) {
+			filename = args[0];
+		} else if (args.length > 1) {
+			System.out.println("ERROR: bad args. usage: \njava Scheduler [filename]");
 			return;
 		}
 		
 		String text = null;
 		try {
-			text = readFile(args[0]);		
+			text = readFile(filename);		
 		} catch(FileNotFoundException ex) {
 			ex.printStackTrace();
 			return;

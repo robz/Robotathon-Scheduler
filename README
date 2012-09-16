@@ -1,0 +1,12 @@
+Compile Scheduler.java with:
+
+$ javac Scheduler
+
+Then run the code with
+
+$ java Scheduler <filename>
+
+Where <filename> is a file that contains scheduling data copy-pasted from the robotathon spreadsheet. See example_times.txt for an example. 
+
+If no file is provided, example_times.txt will be used.
+
